@@ -5,3 +5,5 @@ Clone of the gmail tasks app in react.
 Tasks CRUD operations.
 Supervised by : code dvlpr
 copyrights codedvlpr 2022
+
+React Course by Eve copello
