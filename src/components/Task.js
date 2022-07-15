@@ -15,13 +15,14 @@ export default function Task({
   };
   return (
     <>
-      {edit &&
+      {edit && status != "Completed" && (
         <NewTaskForm
           addNewTask={null}
           editTask={editTask}
           Setadd={setEdit}
           task={task}
-        />}
+        />
+      )}
       <div className="taskContainer">
         <div className="task">
           <span
