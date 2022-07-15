@@ -1,7 +1,7 @@
-import uniqid from "uniqid";
+
 export default function Task({ markComleted, deleteTask, task }) {
   return (
-    <div className="taskContainer" key={uniqid()}>
+    <div className="taskContainer">
       <div className="task">
         <span
           className="taskCheck"

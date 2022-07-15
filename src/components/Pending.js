@@ -12,6 +12,7 @@ export default function Pending({ markComleted, deleteTask, tasks }) {
               markComleted={markComleted}
               deleteTask={deleteTask}
               task={task}
+              key = {task.id}
             />
           );
         })}
