@@ -13,13 +13,10 @@ function App() {
   };
 
   let toggleComleted = (id) => {
-    let newTasks = tasks.map((task) => {
-      if (task.id === id) {
-        task.isDone = !task.isDone;
-      }
-      return task;
-    });
-    SetTasks(newTasks);
+    const taskToComlete = tasks.find((task) => task.id === id);
+    const otherTasks = tasks.filter((task) => task.id !== id);
+    const completedTask = { ...taskToComlete, isDone: !taskToComlete.isDone };
+    SetTasks([...otherTasks, completedTask]);
   };
 
   let deleteTask = (id) => {
@@ -36,6 +33,7 @@ function App() {
   let taskPending = tasks.filter(function (task) {
     return task.isDone === false;
   });
+
   return (
     <>
       <Header />

@@ -66,7 +66,7 @@ body {
   padding: 1px 25px;
   border: none;
   outline: none;
-  background: #ddd;
+  background: rgb(247, 245, 245);
   min-height: 40px;
 }
 .task {
@@ -74,11 +74,11 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: left;
-  padding: 10px 30px;
+  padding: 10px 14px;
 }
 
 .taskContainer:hover {
-  background-color: #ddd;
+  background-color: rgb(247, 244, 244);
 }
 .taskCheck {
   margin: 5px 20px;
@@ -98,7 +98,7 @@ body {
 }
 
 .trashImg {
-  margin-right: 30px;
+  margin-right: 49px;
   height: 24px;
 }
 .Done {
@@ -174,3 +174,29 @@ body {
 .close{
   display: none;
 }
+
+.taskDate
+{
+  color: #1967d2;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  box-sizing: content-box;
+  height: 16px;
+  padding: 3px 10px
+}
+.taskDate:empty
+{
+  display: none;
+}
+.Completed
+{
+  text-decoration: line-through;
+}
+.CompletedCheck
+{
+    background-image: url(./images/tick.png) !important;
+}
+// #CompletedCheck:hover
+// {
+//     background-image: url(https://img.icons8.com/fluency-systems-regular/20/000000/circle.png) !important;
+// }

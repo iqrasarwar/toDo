@@ -2,13 +2,13 @@ import uniqid from "uniqid";
 import { useState } from "react";
 
 export default function AddTasks({ addNewTask }) {
-  const [add,Setadd] = useState(false);
+  const [add, Setadd] = useState(false);
   return add === false ? (
     <>
       <div className="addTaskContainer">
         <div className="addTaskDiv" onClick={() => Setadd(true)}>
           <span className="addTaskSpan">
-            <div aria-hidden="true" className="addTaskIcon" ></div>
+            <div aria-hidden="true" className="addTaskIcon"></div>
             <div>Add a task</div>
           </span>
         </div>
@@ -23,7 +23,12 @@ export default function AddTasks({ addNewTask }) {
     <>
       <form>
         <div className="addContainer">
-          <input type="text" placeholder="Title" onKeyDown={(e) => Submit(e)} />
+          <input
+            type="text"
+            placeholder="Title"
+            onKeyDown={(e) => Submit(e)}
+            autoFocus
+          />
           <input
             type="text"
             placeholder="Describtion"
@@ -48,7 +53,7 @@ export default function AddTasks({ addNewTask }) {
         description: element.children[1].value,
         date: element.children[2].value,
         id: uniqid(),
-        isDone:false
+        isDone: false,
       };
       Setadd(false);
       addNewTask(newTask);

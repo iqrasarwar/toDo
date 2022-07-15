@@ -1,16 +1,19 @@
 
 export default function Task({ markComleted, deleteTask, task }) {
+  let status = task.isDone ? "Completed" : "Pending";
   return (
     <div className="taskContainer">
       <div className="task">
         <span
-          className="taskCheck"
+          className={status + "Check" + " taskCheck"}
           onClick={() => markComleted(task.id)}
         ></span>
-        <div className="taskTitle">
-          <div className="taskTitleText">{task.title}</div>
+        <div>
+          <div className={status + " taskTitle"}>
+            {task.title}
+          </div>
           <div className="taskDescription">{task.description}</div>
-          <div className="taskTitleDate">{task.date}</div>
+          <div className="taskDate">{task.date}</div>
         </div>
       </div>
       <img
