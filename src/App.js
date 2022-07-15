@@ -37,12 +37,12 @@ function App() {
         markComleted={toggleComleted}
         deleteTask={deleteTask}
       />
+      <Comments done={done} rem={tasks.length - done} />
       <Completed
         tasks={tasks}
         markInComleted={toggleComleted}
         deleteTask={deleteTask}
       />
-      <Comments done={done} rem={tasks.length - done} />
     </>
   );
 

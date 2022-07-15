@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
   padding-top: 10px;
-  font-family: "Roboto", cursive;
+  font-family:  Roboto , cursive;
   margin-left: 25%;
   margin-right: 25%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -84,10 +84,10 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  background-image: url("https://img.icons8.com/fluency-systems-regular/20/000000/circle.png");
+  background-image: url( https://img.icons8.com/fluency-systems-regular/20/000000/circle.png );
 }
 .taskCheck:hover {
-  background-image: url("./images/tick.png");
+  background-image: url( ./images/tick.png );
 }
 .taskContainer {
   display: flex;
@@ -109,37 +109,37 @@ body {
   margin: 0 10px;
 }
 .menuImg {
-  padding: "10px";
-  margin-left: "0 10px";
-  border-radius: "19px";
+  padding:  10px ;
+  margin-left:  0 10px ;
+  border-radius:  19px ;
 }
 .addTaskIcon {
-  background-size: "contain";
-  font-size: "24px";
-  height: "20px";
-  margin: "0 16px 0 8px";
-  padding: "auto";
-  text-align: "center";
-  width: "20px";
-  background-image: "url('https://www.gstatic.com/tasks/task-add-accent-light.svg')";
+  background-size:  contain ;
+  font-size:  24px ;
+  height:  20px ;
+  margin:  0 16px 0 8px ;
+  padding:  auto ;
+  text-align:  center ;
+  width:  20px ;
+  background-image:  url('https://www.gstatic.com/tasks/task-add-accent-light.svg') ;
 }
 .addTaskSpan {
-  display: "flex";
-  align-items: "center";
-  color: "#1a73e8";
+  display:  flex ;
+  align-items:  center ;
+  color:  #1a73e8 ;
 }
 
 .header {
-  color: "#80868b";
-  font-size: "10px";
-  font-weight: "500";
-  letter-spacing: "1.5px";
-  text-transform: "uppercase";
-  margin-left: "32px";
+  color:  #80868b ;
+  font-size:  10px ;
+  font-weight:  500 ;
+  letter-spacing:  1.5px ;
+  text-transform:  uppercase ;
+  margin-left:  32px ;
 }
 
 .headTitle {
-  margin-left: "32px";
-  font-weight: "700";
-  font-size: "20px";
+  margin-left:  32px ;
+  font-weight:  700 ;
+  font-size:  20px ;
 }
