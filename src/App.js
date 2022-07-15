@@ -8,10 +8,10 @@ import Completed from "./components/completed";
 function App() {
   let [tasks, SetTasks] = useState([]);
 
-  let done = isDone();
   let addNewTask = (task) => {
     SetTasks([...tasks, task]);
   };
+
   let toggleComleted = (id) => {
     let newTasks = tasks.map((task) => {
       if (task.id === id) {
@@ -21,6 +21,7 @@ function App() {
     });
     SetTasks(newTasks);
   };
+
   let deleteTask = (id) => {
     let newTasks = tasks.filter((task) => {
       return task.id !== id;
@@ -28,30 +29,30 @@ function App() {
     SetTasks(newTasks);
   };
 
+  let taskCompleted = tasks.filter(function (task) {
+    return task.isDone === true;
+  });
+
+  let taskPending = tasks.filter(function (task) {
+    return task.isDone === false;
+  });
   return (
     <>
       <Header />
       <AddTask addNewTask={addNewTask} />
       <Pending
-        tasks={tasks}
+        tasks={taskPending}
         markComleted={toggleComleted}
         deleteTask={deleteTask}
       />
-      <Comments done={done} rem={tasks.length - done} />
+      <Comments done={taskCompleted.length} rem={taskPending.length} />
       <Completed
-        tasks={tasks}
+        tasks={taskCompleted}
         markInComleted={toggleComleted}
         deleteTask={deleteTask}
       />
     </>
   );
-
-  function isDone() {
-    let done = tasks.filter(function (task) {
-      return task.isDone === true;
-    });
-    return done.length;
-  }
 }
 
 export default App;

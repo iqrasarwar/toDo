@@ -1,12 +1,9 @@
 import Task from "./Task";
 export default function Pending({ markComleted, deleteTask, tasks }) {
-  let taskRem = tasks.filter(function (task) {
-    return task.isDone === false;
-  });
   return (
-    taskRem.length > 0 && (
+    tasks.length > 0 && (
       <>
-        {taskRem.map((task) => {
+       {tasks.map((task) => {
           return (
             <Task
               markComleted={markComleted}
