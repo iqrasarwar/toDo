@@ -1,7 +1,13 @@
 import Task from "./Task";
 import { useState } from "react";
 
-export default function Completed({ tasks, markInComleted, deleteTask }) {
+export default function Completed({
+  tasks,
+  markInComleted,
+  deleteTask,
+  editTask,
+  setadd,
+}) {
   let [open, SetOpen] = useState(false);
   let source = open
     ? "https://img.icons8.com/material-rounded/24/000000/expand-arrow--v1.png"
@@ -21,6 +27,8 @@ export default function Completed({ tasks, markInComleted, deleteTask }) {
                 markComleted={markInComleted}
                 deleteTask={deleteTask}
                 task={task}
+                editTask={editTask}
+                setadd={setadd}
                 key={task.id}
               />
             )

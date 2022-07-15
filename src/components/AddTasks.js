@@ -1,8 +1,6 @@
-import uniqid from "uniqid";
-import { useState } from "react";
+import NewTaskForm from "./NewTaskForm";
 
-export default function AddTasks({ addNewTask }) {
-  const [add, Setadd] = useState(false);
+export default function AddTasks({ addNewTask, add, Setadd }) {
   return add === false ? (
     <>
       <div className="addTaskContainer">
@@ -20,43 +18,11 @@ export default function AddTasks({ addNewTask }) {
       </div>
     </>
   ) : (
-    <>
-      <form>
-        <div className="addContainer">
-          <input
-            type="text"
-            placeholder="Title"
-            onKeyDown={(e) => Submit(e)}
-            autoFocus
-          />
-          <input
-            type="text"
-            placeholder="Describtion"
-            onKeyDown={(e) => Submit(e)}
-          />
-          <input
-            type="datetime-local"
-            placeholder="Date/Time"
-            onKeyDown={(e) => Submit(e)}
-          />
-        </div>
-      </form>
-    </>
+    <NewTaskForm
+      addNewTask={addNewTask}
+      editTask={null}
+      Setadd={Setadd}
+      task={null}
+    />
   );
-
-  function Submit(e) {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      let element = e.target.parentElement;
-      let newTask = {
-        title: element.children[0].value,
-        description: element.children[1].value,
-        date: element.children[2].value,
-        id: uniqid(),
-        isDone: false,
-      };
-      Setadd(false);
-      addNewTask(newTask);
-    }
-  }
 }

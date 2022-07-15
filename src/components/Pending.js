@@ -1,15 +1,23 @@
 import Task from "./Task";
-export default function Pending({ markComleted, deleteTask, tasks }) {
+export default function Pending({
+  markComleted,
+  deleteTask,
+  editTask,
+  Setadd,
+  tasks,
+}) {
   return (
     tasks.length > 0 && (
       <>
-       {tasks.map((task) => {
+        {tasks.map((task) => {
           return (
             <Task
               markComleted={markComleted}
               deleteTask={deleteTask}
               task={task}
-              key = {task.id}
+              editTask={editTask}
+              Setadd={Setadd}
+              key={task.id}
             />
           );
         })}
